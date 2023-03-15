@@ -47,12 +47,11 @@ sudo apt install -y $PATH_TMP/mongodb-compass.deb
 rm -r $PATH_TMP/mongodb-compass.deb
 
 #install chatgptcli
-pip install -r $PATH/chatgpt_cli/reqirements.txt
-cp $PATH/chatgpt_cli/settings.example.toml $PATH/chatgpt_cli/settings.toml
+cp $PATH/chatgpt_cli $HOME/chatgpt_cli
+$HOME/chatgpt_cli/setup.sh
 
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
 
 #add bash config
 echo "source /usr/share/doc/fzf/examples/key-bindings.bash" >> $HOME/.bashrc
-echo "alias chatgptcli='python3 $PATH/chatgpt_cli/chatgpt_cli.py'" >> $HOME/.bashrc
