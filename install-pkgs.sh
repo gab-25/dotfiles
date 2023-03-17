@@ -49,5 +49,5 @@ rm -r $PATH_TMP/mongodb-compass.deb
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
 
-#add bash config
-echo "source /usr/share/doc/fzf/examples/key-bindings.bash" >> $HOME/.bashrc
+#copy .bashrc
+cp ./.bashrc $HOME/.bashrc
