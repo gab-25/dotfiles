@@ -46,10 +46,6 @@ wget -O $PATH_TMP/mongodb-compass.deb https://downloads.mongodb.com/compass/mong
 sudo apt install -y $PATH_TMP/mongodb-compass.deb
 rm -r $PATH_TMP/mongodb-compass.deb
 
-#install chatgptcli
-cp $PATH/chatgpt_cli $HOME/chatgpt_cli
-$HOME/chatgpt_cli/setup.sh
-
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
 
