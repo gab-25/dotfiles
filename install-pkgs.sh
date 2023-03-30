@@ -5,7 +5,7 @@ PATH_TMP="$PATH/tmp"
 
 #install packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y htop net-tools fzf ripgrep vim postgresql-client python3-pip
+sudo apt install -y htop net-tools fzf ripgrep vim postgresql-client python3-pip zsh
 
 sudo snap install postman gimp inkscape
 
@@ -46,8 +46,14 @@ wget -O $PATH_TMP/mongodb-compass.deb https://downloads.mongodb.com/compass/mong
 sudo apt install -y $PATH_TMP/mongodb-compass.deb
 rm -r $PATH_TMP/mongodb-compass.deb
 
+#install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
 
 #copy .bashrc
 cp ./.bashrc $HOME/.bashrc
+
+#copy .zshrc
+cp ./.zshrc $HOME/.zshrc
