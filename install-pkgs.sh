@@ -5,9 +5,9 @@ PATH_TMP="$PATH/tmp"
 
 #install packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y htop net-tools fzf ripgrep vim postgresql-client python3-pip zsh
+sudo apt install -y htop net-tools fzf ripgrep vim postgresql-client python3-pip zsh curl
 
-sudo snap install postman gimp inkscape
+sudo snap install postman gimp inkscape mqtt-explorer
 
 python3 -m pip install pip --upgrade
 
@@ -46,14 +46,18 @@ wget -O $PATH_TMP/mongodb-compass.deb https://downloads.mongodb.com/compass/mong
 sudo apt install -y $PATH_TMP/mongodb-compass.deb
 rm -r $PATH_TMP/mongodb-compass.deb
 
+#install github-cli
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
+&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
+&& sudo apt update \
+&& sudo apt install gh -y
+
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
-
-#copy .bashrc
-cp ./.bashrc $HOME/.bashrc
 
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
