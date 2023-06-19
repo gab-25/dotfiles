@@ -11,6 +11,15 @@ sudo snap install postman gimp inkscape mqtt-explorer
 
 python3 -m pip install pip --upgrade
 
+#install font Roboto
+wget -O $PATH_TMP/roboto.zip 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/RobotoMono.zip'
+unzip -q $PATH_TMP/roboto.zip -d $PATH_TMP/roboto
+rm -r $PATH_TMP/roboto.zip
+mkdir -p $HOME/.local/share/fonts
+cp -r $PATH_TMP/roboto/*.ttf $HOME/.local/share/fonts
+rm -rf $PATH_TMP/roboto
+fc-cache -fv
+
 #install docker
 curl -fsSL https://get.docker.com -o $PATH_TMP/get-docker.sh
 sudo sh $PATH_TMP/get-docker.sh
@@ -20,6 +29,14 @@ sudo usermod -aG docker $USER
 #install nodejs
 curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
 sudo apt-get install -y nodejs
+
+#install neovim
+wget -O $PATH_TMP/neovim.tar.gz 'https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz'
+tar xzvf neovim.tar.gz
+mv neovim $HOME
+rm -r neovim.tar.gz
+ln -s ~/neovim/bin/nvim .local/bin/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 
 #install vs-code
 wget -O $PATH_TMP/vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
