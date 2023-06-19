@@ -85,3 +85,6 @@ cp ./.vimrc $HOME/.vimrc
 
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
+
+#copy nvchad custom config
+cp -r ./nvchad/* $HOME/.config/nvim/lua/
