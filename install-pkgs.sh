@@ -11,6 +11,15 @@ sudo snap install postman gimp inkscape mqtt-explorer
 
 python3 -m pip install pip --upgrade
 
+#install font Roboto
+wget -O $PATH_TMP/roboto.zip 'https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/RobotoMono.zip'
+unzip -q $PATH_TMP/roboto.zip -d $PATH_TMP/roboto
+rm $PATH_TMP/roboto.zip
+mkdir -p $HOME/.local/share/fonts
+cp -r $PATH_TMP/roboto/*.ttf $HOME/.local/share/fonts
+rm -rf $PATH_TMP/roboto
+fc-cache -fv
+
 #install docker
 curl -fsSL https://get.docker.com -o $PATH_TMP/get-docker.sh
 sudo sh $PATH_TMP/get-docker.sh
