@@ -68,5 +68,9 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 #copy .vimrc
 cp ./.vimrc $HOME/.vimrc
 
+#install vim vundle
+git clone https://github.com/vundlevim/vundle.vim.git ~/.vim/bundle/vundle.vim
+vim +plugininstall +qall
+
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
