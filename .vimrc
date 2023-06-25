@@ -1,20 +1,3 @@
-syntax enable
-set autoindent expandtab tabstop=2 shiftwidth=2
-set encoding=UTF-8
-set background=dark
-set termguicolors
-set mouse=a
-set number
-set noswapfile
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set expandtab
-set nowrap
-set autoread
-set ignorecase
-set encoding=UTF-8
-
 set nocompatible
 filetype off
 
@@ -25,17 +8,34 @@ Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'vim-airline/vim-airline'
 Plugin 'preservim/nerdtree'
 Plugin 'ryanoasis/vim-devicons'
-Plugin 'junegunn/fzf.vim'
-Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
-filetype plugin indent on
 
+filetype plugin indent on
 colorscheme dracula
+syntax enable
+set tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+set encoding=UTF-8
+set background=dark
+set termguicolors
+set mouse=a
+set number
+set noswapfile
+set nowrap
+set autoread
+set ignorecase
+set encoding=UTF-8
+
+au BufRead,BufNewFile *.py set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+
+nnoremap <C-n> :NERDTreeToggle<CR>
+
+let g:flake8_show_in_gutter=1
+let g:flake8_show_in_file=1
+let g:airline#extensions#tabline#enabled=1
 
 if exists("g:loaded_webdevicons")
   call webdevicons#refresh()
 endif
-
-nnoremap <C-n> :NERDTreeToggle<CR>
-nnoremap <C-p> :Files<CR>
-nnoremap <C-f> :Rg<CR>
