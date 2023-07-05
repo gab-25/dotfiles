@@ -11,6 +11,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'nvie/vim-flake8'
 Plugin 'davidhalter/jedi-vim'
+Plugin 'preservim/nerdcommenter'
 call vundle#end()
 
 filetype plugin indent on
