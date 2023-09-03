@@ -35,6 +35,11 @@ wget -O $PATH_TMP/vscode.deb 'https://code.visualstudio.com/sha/download?build=s
 sudo apt install -y $PATH_TMP/vscode.deb
 rm $PATH_TMP/vscode.deb 
 
+#install neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o $HOME/nvim.appimage
+chmod u+x $HOME/nvim.appimage
+ln -s $HOME/nvim.appimage $HOME/.local/bin/nvim
+
 #install dbeaver
 wget -O $PATH_TMP/dbeaver.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo apt install -y $PATH_TMP/dbeaver.deb
@@ -65,12 +70,9 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#copy .vimrc
-cp ./.vimrc $HOME/.vimrc
-
-#install vim vundle
-git clone https://github.com/vundlevim/vundle.vim.git ~/.vim/bundle/vundle.vim
-vim +plugininstall +qall
+#install lunarvim
+LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
+cp -r ./lunarvim/* $HOME/.config/lvim
 
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
