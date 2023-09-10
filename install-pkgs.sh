@@ -70,9 +70,8 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#install lunarvim
-LV_BRANCH='release-1.3/neovim-0.9' bash <(curl -s https://raw.githubusercontent.com/LunarVim/LunarVim/release-1.3/neovim-0.9/utils/installer/install.sh)
-cp -r ./lunarvim/* $HOME/.config/lvim
+#copy nvim configs
+cp -r ./nvim $HOME/.config/nvim
 
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
