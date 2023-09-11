@@ -5,4 +5,12 @@ return {
       autoformat = false,
     },
   },
+  {
+    "williamboman/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "angular-language-server",
+      },
+    },
+  },
 }
