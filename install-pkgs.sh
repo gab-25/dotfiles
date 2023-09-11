@@ -70,6 +70,13 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+#install lazygit
+LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
+curl -Lo $PATH_TMP/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
+tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
+sudo install $HOME/lazygit /usr/local/bin
+rm $PATH_TMP/lazygit.tar.gz
+
 #copy nvim configs
 cp -r ./nvim $HOME/.config/nvim
 
