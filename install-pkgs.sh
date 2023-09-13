@@ -27,7 +27,9 @@ rm $PATH_TMP/get-docker.sh
 sudo usermod -aG docker $USER
 
 #install nodejs
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash - &&\
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_18.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+sudo apt-get update
 sudo apt-get install -y nodejs
 
 #install vs-code
