@@ -10,6 +10,7 @@ return {
     opts = {
       ensure_installed = {
         "angular-language-server",
+        "prisma-language-server",
       },
     },
   },
