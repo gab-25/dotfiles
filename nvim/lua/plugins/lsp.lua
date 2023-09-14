@@ -12,6 +12,7 @@ return {
         "angular-language-server",
         "prisma-language-server",
         "black",
+        "debugpy",
       },
     },
   },
