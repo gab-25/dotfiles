@@ -7,7 +7,7 @@ PATH_TMP="$PATH/tmp"
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y htop net-tools fzf ripgrep fd-find vim postgresql-client sqlite3 python3-pip zsh curl
 
-sudo snap install postman gimp inkscape mqtt-explorer
+sudo snap install gimp inkscape mqtt-explorer
 
 python3 -m pip install pip --upgrade
 
@@ -78,6 +78,9 @@ curl -Lo $PATH_TMP/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/rele
 tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
 sudo install $HOME/lazygit /usr/local/bin
 rm $PATH_TMP/lazygit.tar.gz
+
+#install npm packages
+sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
 
 #copy nvim configs
 cp -r ./nvim $HOME/.config/nvim
