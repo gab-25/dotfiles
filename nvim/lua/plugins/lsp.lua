@@ -9,8 +9,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
-        "angular-language-server",
-        "prisma-language-server",
         "black",
         "debugpy",
       },
