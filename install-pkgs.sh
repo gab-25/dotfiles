@@ -83,6 +83,9 @@ rm $PATH_TMP/lazygit.tar.gz
 #install npm packages
 sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
 
+#install flutter
+sudo snap install flutter --classic
+
 #copy nvim configs
 cp -r ./nvim $HOME/.config/nvim
 
