@@ -5,7 +5,7 @@ return {
       autoformat = false,
       servers = {
         dartls = {},
-      }
+      },
     },
   },
   {
@@ -23,5 +23,13 @@ return {
     opts = function(_, opts)
       table.insert(opts.sources, require("null-ls").builtins.formatting.black)
     end,
+  },
+  {
+    "akinsho/flutter-tools.nvim",
+    lazy = false,
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+    },
+    config = true,
   },
 }
