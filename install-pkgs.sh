@@ -80,14 +80,11 @@ tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
 sudo install $HOME/lazygit /usr/local/bin
 rm $PATH_TMP/lazygit.tar.gz
 
-#install npm packages
-sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
-
-#install flutter
-sudo snap install flutter --classic
-
 #install android-studio
 sudo snap install android-studio --classic
+
+#install npm packages
+sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
 
 #copy nvim configs
 cp -r ./nvim $HOME/.config/nvim

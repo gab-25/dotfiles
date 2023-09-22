@@ -24,12 +24,4 @@ return {
       table.insert(opts.sources, require("null-ls").builtins.formatting.black)
     end,
   },
-  {
-    "akinsho/flutter-tools.nvim",
-    lazy = false,
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-    },
-    config = true,
-  },
 }
