@@ -14,7 +14,6 @@ return {
       ensure_installed = {
         "black",
         "debugpy",
-        "dart-debug-adapter",
       },
     },
   },
