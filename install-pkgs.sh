@@ -86,6 +86,9 @@ sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
 #install flutter
 sudo snap install flutter --classic
 
+#install android-studio
+sudo snap install android-studio --classic
+
 #copy nvim configs
 cp -r ./nvim $HOME/.config/nvim
 
