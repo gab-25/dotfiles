@@ -43,9 +43,10 @@ chmod u+x $HOME/nvim.appimage
 ln -s $HOME/nvim.appimage $HOME/.local/bin/nvim
 
 #install dbeaver
-wget -O $PATH_TMP/dbeaver.deb https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-sudo apt install -y $PATH_TMP/dbeaver.deb
-rm $PATH_TMP/dbeaver.deb
+sudo  wget -O /usr/share/keyrings/dbeaver.gpg.key https://dbeaver.io/debs/dbeaver.gpg.key
+echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg.key] https://dbeaver.io/debs/dbeaver-ce /" | sudo tee /etc/apt/sources.list.d/dbeaver.list
+sudo apt-get update
+sudo apt-get install -y dbeaver-ce
 
 #install virtualbox
 wget -O $PATH_TMP/virtualbox.deb https://download.virtualbox.org/virtualbox/7.0.6/virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
