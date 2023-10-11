@@ -14,11 +14,13 @@ return {
       ensure_installed = {
         "black",
         "debugpy",
+        "angular-language-server",
+        "prisma-language-server",
       },
     },
   },
   {
-    "jose-elias-alvarez/null-ls.nvim",
+    "nvimtools/none-ls.nvim",
     opts = function(_, opts)
       table.insert(opts.sources, require("null-ls").builtins.formatting.black)
     end,
