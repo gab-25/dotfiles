@@ -5,7 +5,7 @@ PATH_TMP="$PATH/tmp"
 
 #install packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y htop net-tools fzf ripgrep fd-find vim postgresql-client sqlite3 python3-pip zsh curl
+sudo apt install -y htop net-tools fzf ripgrep fd-find vim postgresql-client sqlite3 python3-pip zsh curl openjdk-11-jdk
 
 sudo snap install gimp inkscape mqtt-explorer
 
