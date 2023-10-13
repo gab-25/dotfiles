@@ -5,7 +5,7 @@ PATH_TMP="$PATH/tmp"
 
 #install packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y htop net-tools fzf ripgrep fd-find vim postgresql-client sqlite3 python3-pip zsh curl openjdk-11-jdk
+sudo apt install -y htop net-tools fzf ripgrep fd-find vim postgresql-client sqlite3 python3-pip zsh curl
 
 sudo snap install gimp inkscape mqtt-explorer
 
@@ -79,6 +79,9 @@ curl -Lo $PATH_TMP/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/rele
 tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
 sudo install $HOME/lazygit /usr/local/bin
 rm $PATH_TMP/lazygit.tar.gz
+
+#install flutter
+sudo snap install flutter --classic
 
 #install android-studio
 sudo snap install android-studio --classic
