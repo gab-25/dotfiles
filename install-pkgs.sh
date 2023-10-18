@@ -58,11 +58,6 @@ wget -O $PATH_TMP/google-chrome.deb https://www.google.com/intl/it_it/chrome/tha
 sudo apt install -y $PATH_TMP/google-chrome.deb
 rm $PATH_TMP/google-chrome.deb
 
-#install mongodb-compass
-wget -O $PATH_TMP/mongodb-compass.deb https://downloads.mongodb.com/compass/mongodb-compass_1.36.0_amd64.deb?_ga=2.181712164.2038150423.1678827658-1828552554.1678621412
-sudo apt install -y $PATH_TMP/mongodb-compass.deb
-rm $PATH_TMP/mongodb-compass.deb
-
 #install github-cli
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
 && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
