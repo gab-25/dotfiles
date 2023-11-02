@@ -73,7 +73,11 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo $PATH_TMP/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
 sudo install $HOME/lazygit /usr/local/bin
-rm $PATH_TMP/lazygit.tar.gz
+rm $PATH_TMP/lazygit.tar.gz $HOME/lazygit
+
+#install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 
 #install flutter
 sudo snap install flutter --classic
