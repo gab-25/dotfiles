@@ -14,6 +14,7 @@ return {
       ensure_installed = {
         "black",
         "debugpy",
+        "angular-language-server",
       },
     },
   },
