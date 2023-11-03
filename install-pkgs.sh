@@ -32,15 +32,16 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 sudo apt-get update
 sudo apt-get install -y nodejs
 
+#install npm packages
+sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
+
+#install rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 #install vs-code
 wget -O $PATH_TMP/vscode.deb 'https://code.visualstudio.com/sha/download?build=stable&os=linux-deb-x64'
 sudo apt install -y $PATH_TMP/vscode.deb
 rm $PATH_TMP/vscode.deb 
-
-#install neovim
-curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage -o $HOME/nvim.appimage
-chmod u+x $HOME/nvim.appimage
-ln -s $HOME/nvim.appimage $HOME/.local/bin/nvim
 
 #install dbeaver
 sudo  wget -O /usr/share/keyrings/dbeaver.gpg.key https://dbeaver.io/debs/dbeaver.gpg.key
@@ -68,28 +69,16 @@ curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo 
 #install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-#install lazygit
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo $PATH_TMP/lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf $PATH_TMP/lazygit.tar.gz $HOME/lazygit
-sudo install $HOME/lazygit /usr/local/bin
-rm $PATH_TMP/lazygit.tar.gz $HOME/lazygit
-
-#install rust
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-
-
 #install flutter
 sudo snap install flutter --classic
 
 #install android-studio
 sudo snap install android-studio --classic
 
-#install npm packages
-sudo npm install -g @angular/cli @ionic/cli @nestjs/cli typescript
-
-#copy nvim configs
-cp -r ./nvim $HOME/.config/nvim
+#install anaconda
+wget -O $PATH_TMP/anaconda3.sh https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
+sudo $PATH_TMP/anaconda3.sh
+rm $PATH_TMP/anaconda3.sh
 
 #copy .zshrc
 cp ./.zshrc $HOME/.zshrc
