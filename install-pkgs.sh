@@ -49,6 +49,11 @@ echo "deb [signed-by=/usr/share/keyrings/dbeaver.gpg.key] https://dbeaver.io/deb
 sudo apt-get update
 sudo apt-get install -y dbeaver-ce
 
+#install mongodb-compass
+wget -O $PATH_TMP/mongodb-compass.deb https://downloads.mongodb.com/compass/mongodb-compass_1.40.4_amd64.deb
+sudo apt install $PATH_TMP/mongodb-compass.deb
+rm $PATH_TMP/mongodb-compass.deb
+
 #install virtualbox
 wget -O $PATH_TMP/virtualbox.deb https://download.virtualbox.org/virtualbox/7.0.6/virtualbox-7.0_7.0.6-155176~Ubuntu~jammy_amd64.deb
 sudo apt install -y $PATH_TMP/virtualbox.deb
