@@ -36,8 +36,3 @@ cp ./.zshrc $HOME/.zshrc
 #install flutter
 wget -O /tmp/flutter.tar.xz https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.16.1-stable.tar.xz
 tar xf /tmp/flutter.tar.xz -C $HOME
-
-#install code-server
-curl -fsSL https://code-server.dev/install.sh | sh
-sudo systemctl enable --now code-server@$USER
-cp -r ./code-server $HOME/.config
