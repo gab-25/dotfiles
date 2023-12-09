@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#copy zshrc
-cp ./.zshrc $HOME/.zshrc
+#copy nvim configuration
+cp -r ./nvim $HOME/.config
 
-#copy nvim
-cp ./nvim $HOME/.config
+#copy dotfiles
+cp ./zshrc $HOME/.zshrc
+cp ./gitconfig $HOME/.gitconfig
