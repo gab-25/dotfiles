@@ -1,12 +1,9 @@
 return {
-  "williamboman/mason.nvim",
+  "neovim/nvim-lspconfig",
   opts = {
-    ensure_installed = {
-      "typescript-language-server",
-      "angular-language-server",
-      "tailwindcss-language-server",
-      "pyright",
-      "black",
+    servers = {
+      angularls = {},
+      tailwindcss = {},
     },
   },
 }
