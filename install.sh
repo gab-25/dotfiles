@@ -4,6 +4,7 @@
 cp -r ./nvim $HOME/.config
 
 #copy dotfiles
+cp ./vimrc $HOME/.vimrc
 cp ./zshrc $HOME/.zshrc
 cp ./gitconfig $HOME/.gitconfig
 
