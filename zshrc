@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git pip npm docker docker-compose fzf gh kubectl ng flutter)
+plugins=(git pip poetry npm docker docker-compose fzf gh kubectl ng flutter)
 
 source $ZSH/oh-my-zsh.sh
 
