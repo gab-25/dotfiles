@@ -2,7 +2,7 @@
 
 #copy nvim configurations
 bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
-# cp -r ./nvim $HOME/.config
+cp -r ./nvim/. $HOME/.config/lvim
 
 #copy dotfiles
 cp ./bashrc $HOME/.bashrc
