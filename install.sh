@@ -2,7 +2,7 @@
 #TODO: trovare un modo per installare sempre le ultime versioni
 
 sudo apt-get update
-sudo apt-get install -y curl tmux vim fd-find ripgrep nodejs npm
+sudo apt-get install -y curl vim fd-find ripgrep nodejs npm
 
 #install neovim
 curl -o /tmp/nvim-linux64.tar.gz https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz
@@ -19,8 +19,4 @@ bash <(curl -s https://repo.anaconda.com/archive/Anaconda3-2024.06-1-Linux-x86_6
 #copy dotfiles
 cp ./.vimrc $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
-cp ./.tmux.conf $HOME/.tmux.conf
 cp ./nvim $HOME/.config/
-
-#copy fonts
-cp -r ./fonts/* $HOME/.fonts/*
