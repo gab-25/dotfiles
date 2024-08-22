@@ -16,7 +16,7 @@
   },
   "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "buffer_font_size": 14,
   "theme": {
     "mode": "system",
     "light": "One Light",
@@ -28,5 +28,26 @@
     "title_bar.inactive_background": "#1c1d26ff",
     "status_bar.background": "#141119ff"
   },
-  "language_servers": ["!eslint", "..."]
+  "format_on_save": "off",
+  "tabs": {
+    "file_icons": true,
+    "git_status": true
+  },
+  "tab_size": 2,
+  "languages": {
+    "Python": {
+      "tab_size": 4,
+      "language_servers": ["pyright", "ruff"],
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff"
+          }
+        }
+      ]
+    },
+    "TypeScript": {
+      "language_servers": ["vtsls"]
+    }
+  }
 }
