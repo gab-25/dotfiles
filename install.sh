@@ -1,14 +1,15 @@
 #!/bin/bash
 
 sudo apt-get update
-sudo apt-get install -y curl vim fd-find ripgrep nodejs npm
+sudo apt-get install -y curl vim zsh fd-find ripgrep
 
-#install anaconda
-ANACONDA3_LATEST=$(python latest_anaconda3.py)
-bash <(curl -s https://repo.anaconda.com/archive/$ANACONDA3_LATEST)
+#install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+
+#install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 #copy dotfiles
-cp ./.bashrc $HOME/.bashrc
+cp ./.zshrc $HOME/.zshrc
 cp ./.vimrc $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
-cp ./zed/* $HOME/.config/zed/
