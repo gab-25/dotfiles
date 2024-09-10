@@ -11,3 +11,4 @@ curl -fsSL https://get.jetify.com/devbox | bash
 #copy dotfiles
 cp ./.vimrc $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
+cp -r ./zed/*.json $HOME/config/zed
