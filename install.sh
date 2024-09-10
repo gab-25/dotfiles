@@ -1,14 +1,13 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt-get install -y curl vim zsh fd-find ripgrep
+sudo apt-get install -y curl vim fd-find ripgrep python3 python3-pip nodejs npm
 
-#install oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#install anaconda
+python install_anaconda3.py
 
-#install nvm
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+#install devbox
+curl -fsSL https://get.jetify.com/devbox | bash
 
 #copy dotfiles
-cp ./.zshrc $HOME/.zshrc
 cp ./.vimrc $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
