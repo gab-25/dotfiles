@@ -5,11 +5,8 @@ sudo apt-get install -y curl vim fd-find ripgrep python3 python3-pip nodejs npm
 #install anaconda
 python install_anaconda3.py
 
-#install nix
-sh <(curl -L https://nixos.org/nix/install) --daemon
-
-#install devenv
-nix-env -iA devenv -f https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable
+#install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
 
 #copy dotfiles
 cp ./.vimrc $HOME/.vimrc
