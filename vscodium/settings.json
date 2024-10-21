@@ -1,0 +1,30 @@
+{
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.iconTheme": "material-icon-theme",
+  "git.confirmSync": false,
+  "git.confirmForcePush": false,
+  "git.allowForcePush": true,
+  "git.replaceTagsWhenPull": true,
+  "scm.showActionButton": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true,
+    "**/.dist": true,
+  },
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "window.customTitleBarVisibility": "auto",
+  "editor.insertSpaces": true,
+  "[python]": {
+    "editor.tabSize": 4,
+  },
+  "[css]": {
+    "editor.tabSize": 4,
+  },
+  "[html]": {
+    "editor.tabSize": 4,
+  }
+}

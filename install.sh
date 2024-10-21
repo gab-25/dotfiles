@@ -8,4 +8,5 @@ python install_anaconda3.py
 #copy dotfiles
 cp ./.vimrc $HOME/.vimrc
 cp ./.gitconfig $HOME/.gitconfig
-cp -r ./zed/*.json $HOME/config/zed
+cp -r ./zed/* $HOME/.config/zed
+cp -r ./vscodium/* $HOME/.config/VSCodium/User
