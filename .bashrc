@@ -30,11 +30,8 @@ export PATH="/home/gab25/flutter/bin:/home/gab25/.pub-cache/bin:$PATH"
 # Node
 export PATH="/home/gab25/node/bin:$PATH"
 
-alias dev-workspace="distrobox enter dev_env -e tmux"
-
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/gab25/google-cloud-sdk/path.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/gab25/google-cloud-sdk/completion.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/completion.bash.inc'; fi
-
