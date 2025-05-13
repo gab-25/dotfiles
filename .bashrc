@@ -24,6 +24,8 @@ if [ -d ~/.bashrc.d ]; then
 fi
 unset rc
 
+alias dev-workspace="distrobox enter dev_env -e tmux"
+
 # Flutter
 export PATH="/home/gab25/flutter/bin:/home/gab25/.pub-cache/bin:$PATH"
 
