@@ -27,13 +27,13 @@ unset rc
 alias dev-workspace="distrobox enter dev_env -e tmux"
 
 # Flutter
-export PATH="/home/gab25/flutter/bin:/home/gab25/.pub-cache/bin:$PATH"
+export PATH="$HOME/flutter/bin:$HOME/.pub-cache/bin:$PATH"
 
 # Node
-export PATH="/home/gab25/node/bin:$PATH"
+export PATH="$HOME/node/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/gab25/google-cloud-sdk/path.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/path.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/path.bash.inc' ]; then . '$HOME/google-cloud-sdk/path.bash.inc'; fi
 
 # The next line enables shell command completion for gcloud.
-if [ -f '/home/gab25/google-cloud-sdk/completion.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/completion.bash.inc'; fi
+if [ -f '$HOME/google-cloud-sdk/completion.bash.inc' ]; then . '$HOME/google-cloud-sdk/completion.bash.inc'; fi
