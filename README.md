@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo apt install -y vim fzf fd-find ripgrep gcc lazygit
+sudo apt install -y vim fzf fd-find ripgrep gcc
 ```
 
 Install tmux
@@ -38,4 +38,11 @@ Install firebase cli
 
 ```bash
 curl -sL https://firebase.tools | bash
+```
+
+Install node.js
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+nvm install --lts
 ```
