@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo apt install -y vim fzf fd-find ripgrep gcc
+sudo apt install -y curl vim fzf fd-find ripgrep gcc
 ```
 
 Install tmux
@@ -23,6 +23,8 @@ Install docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo sh ./get-docker.sh
 rm -rf get-docker.sh
+sudo usermod -aG docker $USER
+newgrp docker
 ```
 
 Install google cloud cli
@@ -44,5 +46,6 @@ Install node.js
 
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source ~/.bashrc
 nvm install --lts
 ```
