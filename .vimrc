@@ -7,7 +7,6 @@ syntax on
 set nocompatible
 set encoding=utf-8
 set number
-set cursorline
 set nobackup
 set nowrap
 set ignorecase
