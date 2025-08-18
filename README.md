@@ -49,3 +49,10 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 source ~/.bashrc
 nvm install --lts
 ```
+
+Install python
+
+```bash
+curl -fsSL https://pyenv.run | bash
+curl -sSL https://install.python-poetry.org | python3 -
+```
