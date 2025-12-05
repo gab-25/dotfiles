@@ -54,5 +54,7 @@ Install python
 
 ```bash
 curl -fsSL https://pyenv.run | bash
-curl -sSL https://install.python-poetry.org | python3 -
+pyenv install 3.13
+pip install pipx
+pipx install poetry
 ```
