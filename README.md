@@ -10,13 +10,6 @@ Install requirements packages
 sudo apt install -y curl vim fzf fd-find ripgrep gcc
 ```
 
-Install tmux
-
-```bash
-sudo apt install -y tmux
-git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-```
-
 Install docker
 
 ```bash
@@ -25,6 +18,23 @@ sudo sh ./get-docker.sh
 rm -rf get-docker.sh
 sudo usermod -aG docker $USER
 newgrp docker
+```
+
+Install python
+
+```bash
+curl -fsSL https://pyenv.run | bash
+pyenv install 3.13
+pip install pipx
+pipx install poetry
+```
+
+Install node.js
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+source ~/.bashrc
+nvm install --lts
 ```
 
 Install google cloud cli
@@ -39,22 +49,11 @@ rm -rf google-cloud-cli-linux-x86_64.tar.gz
 Install firebase cli
 
 ```bash
-curl -sL https://firebase.tools | bash
+npm install -g firebase-tools
 ```
 
-Install node.js
+Install gemini cli
 
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-source ~/.bashrc
-nvm install --lts
-```
-
-Install python
-
-```bash
-curl -fsSL https://pyenv.run | bash
-pyenv install 3.13
-pip install pipx
-pipx install poetry
+npm install -g gemini-cli
 ```
