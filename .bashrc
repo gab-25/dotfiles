@@ -116,6 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+if [ -f ~/.bashrc_local ]; then
+    source ~/.bashrc_local
+fi
+
 export PATH="$HOME/.local/bin:$PATH"
 
 alias nvim="$HOME/nvim/bin/nvim"
