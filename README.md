@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo apt install -y curl vim fzf fd-find ripgrep gcc
+sudo apt install -y curl vim fzf fd-find ripgrep gcc lazygit btop starship
 ```
 
 Install docker
@@ -18,6 +18,7 @@ sudo sh ./get-docker.sh
 rm -rf get-docker.sh
 sudo usermod -aG docker $USER
 newgrp docker
+curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 ```
 
 Install python
@@ -55,5 +56,5 @@ npm install -g firebase-tools
 Install gemini cli
 
 ```bash
-npm install -g gemini-cli
+npm install -g @google/gemini-cli
 ```
