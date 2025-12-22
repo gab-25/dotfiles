@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo apt install -y curl vim fzf fd-find ripgrep gcc lazygit btop starship
+sudo apt install -y curl vim build-essential fzf fd-find ripgrep gcc lazygit btop starship
 ```
 
 Install docker
