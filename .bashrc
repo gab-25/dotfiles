@@ -116,14 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-if [ -f ~/.bash_local ]; then
-    . ~/.bash_local
-fi
-
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/flutter/bin:$PATH"
 
 eval "$(starship init bash)"
-
 eval "$(fzf --bash)"
 
 export NVM_DIR="$HOME/.nvm"
