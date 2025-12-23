@@ -118,12 +118,6 @@ fi
 
 export PATH="$HOME/.local/bin:$PATH"
 
-alias nvim="$HOME/nvim/bin/nvim"
-
-if command -v tmux &>/dev/null && [ -z "$TMUX" ]; then
-  tmux attach-session -t default || tmux new-session -s default
-fi
-
 eval "$(starship init bash)"
 
 eval "$(fzf --bash)"
@@ -135,8 +129,6 @@ export NVM_DIR="$HOME/.nvm"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
-
-export PATH="$HOME/flutter/bin:$PATH"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/gab25/google-cloud-sdk/path.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/path.bash.inc'; fi
