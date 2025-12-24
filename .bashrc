@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/flutter/bin:$PATH"
 
