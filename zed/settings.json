@@ -1,0 +1,59 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "minimap": {
+    "show": "auto",
+  },
+  "base_keymap": "VSCode",
+  "current_line_highlight": "none",
+  "vim_mode": true,
+  "agent": {
+    "default_model": {
+      "provider": "google",
+      "model": "gemini-2.5-flash",
+    },
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "restore_on_startup": "launchpad",
+  "features": {
+    "edit_prediction_provider": "zed",
+  },
+  "icon_theme": "Material Icon Theme",
+  "ui_font_size": 14.0,
+  "buffer_font_size": 12.0,
+  "theme": {
+    "mode": "system",
+    "light": "Gruvbox Light Hard",
+    "dark": "Gruvbox Dark Hard",
+  },
+  "languages": {
+    "XML": {
+      "tab_size": 2,
+      "preferred_line_length": 120,
+    },
+  },
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "typeCheckingMode": "basic",
+        },
+      },
+    },
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 120,
+          "organizeImports": false,
+        },
+      },
+    },
+  },
+}
