@@ -7,33 +7,37 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo apt install -y curl vim build-essential fzf fd-find ripgrep gcc lazygit btop starship
+sudo pacman -S --noconfirm fzf fd ripgrep lazygit lazydocker btop starship neovim rclone ttf-jetbrains-mono-nerd zed
+```
+
+Install AUR Helper
+```bash
+sudo pacman -S --needed --noconfirm git base-devel
+git clone https://aur.archlinux.org/yay.git /tmp/yay
+(cd /tmp/yay && makepkg -si)
+rm -rf /tmp/yay
 ```
 
 Install docker
 
 ```bash
-curl -fsSL https://get.docker.com -o get-docker.sh
-sudo sh ./get-docker.sh
-rm -rf get-docker.sh
+sudo pacman -S --noconfirm docker
 sudo usermod -aG docker $USER
 newgrp docker
-curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 ```
 
 Install python
 
 ```bash
 curl -fsSL https://pyenv.run | bash
-pyenv install 3.13
-pip install pipx
+sudo pacman -S --noconfirm python-pipx
 pipx install poetry
 ```
 
 Install node.js
 
 ```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
 source ~/.bashrc
 nvm install --lts
 ```
@@ -41,9 +45,9 @@ nvm install --lts
 Install google cloud cli
 
 ```bash
-curl -O https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
-tar -xf google-cloud-cli-linux-x86_64.tar.gz -C ~/
-rm -rf google-cloud-cli-linux-x86_64.tar.gz
+curl -o /tmp/google-cloud-cli-linux-x86_64.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
+tar -xf /tmp/google-cloud-cli-linux-x86_64.tar.gz -C ~/
+rm -rf /tmp/google-cloud-cli-linux-x86_64.tar.gz
 ~/google-cloud-sdk/install.sh
 ```
 
