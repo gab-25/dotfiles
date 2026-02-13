@@ -7,6 +7,17 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "outline_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "tree_view": true,
+  },
+  "ui_font_size": 14.0,
+  "buffer_font_size": 12.0,
   "edit_predictions": {
     "provider": "copilot",
   },
@@ -16,6 +27,7 @@
   "base_keymap": "VSCode",
   "current_line_highlight": "none",
   "vim_mode": true,
+  "tab_size": 2,
   "agent": {
     "default_model": {
       "provider": "google",
@@ -26,8 +38,6 @@
   },
   "restore_on_startup": "launchpad",
   "icon_theme": "Material Icon Theme",
-  "ui_font_size": 16.0,
-  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "Gruvbox Light Hard",
@@ -35,8 +45,13 @@
   },
   "languages": {
     "XML": {
-      "tab_size": 2,
       "preferred_line_length": 120,
+    },
+    "TypeScript": {
+      "tab_size": 4,
+    },
+    "Python": {
+      "tab_size": 4,
     },
   },
   "lsp": {
@@ -52,6 +67,10 @@
         "settings": {
           "lineLength": 120,
           "organizeImports": false,
+          "lint": {
+            "extendSelect": ["D"],
+            "ignore": ["D100", "D107"],
+          },
         },
       },
     },
