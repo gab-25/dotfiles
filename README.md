@@ -29,7 +29,7 @@ newgrp docker
 Install python
 
 ```bash
-curl -fsSL https://pyenv.run | bash
+curl -LsSf https://astral.sh/uv/install.sh | sh
 sudo pacman -S --noconfirm python-pipx
 pipx install poetry
 ```
