@@ -30,8 +30,7 @@ Install python
 
 ```bash
 curl -LsSf https://astral.sh/uv/install.sh | sh
-sudo pacman -S --noconfirm python-pipx
-pipx install poetry
+curl -sSL https://install.python-poetry.org | python3 -
 ```
 
 Install node.js
