@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo pacman -Sy --noconfirm fzf fd ripgrep lazygit lazydocker btop starship neovim rclone ttf-jetbrains-mono-nerd zed net-tools bash-completion kubectl k9s restic
+sudo pacman -Sy --noconfirm fzf fd ripgrep lazygit lazydocker btop starship neovim rclone ttf-jetbrains-mono-nerd zed net-tools bash-completion kubectl k9s helm restic
 ```
 
 Install AUR Helper
