@@ -7,11 +7,23 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "agent_servers": {
+    "gemini": {
+      "type": "registry"
+    }
+  },
+  "context_servers": {},
+  "agent_buffer_font_size": 12.0,
+  "agent_ui_font_size": 14.0,
+  "disable_ai": false,
+  "debugger": {
+    "dock": "bottom",
+  },
   "collaboration_panel": {
-    "dock": "left"
+    "dock": "right",
   },
   "outline_panel": {
-    "dock": "left"
+    "dock": "left",
   },
   "git_panel": {
     "tree_view": true,
@@ -19,8 +31,10 @@
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "edit_predictions": {
-    "provider": "copilot",
+    "mode": "subtle",
+    "provider": "zed",
   },
+  "show_edit_predictions": false,
   "minimap": {
     "show": "auto",
   },
@@ -28,14 +42,6 @@
   "current_line_highlight": "none",
   "vim_mode": true,
   "tab_size": 2,
-  "agent": {
-    "default_model": {
-      "provider": "google",
-      "model": "gemini-2.5-flash",
-    },
-    "favorite_models": [],
-    "model_parameters": [],
-  },
   "restore_on_startup": "launchpad",
   "icon_theme": "Material Icon Theme",
   "theme": {
@@ -50,7 +56,13 @@
     "TypeScript": {
       "tab_size": 4,
     },
+    "TSX": {
+      "tab_size": 4,
+    },
     "Python": {
+      "tab_size": 4,
+    },
+    "TOML": {
       "tab_size": 4,
     },
   },
@@ -69,7 +81,7 @@
           "organizeImports": false,
           "lint": {
             "extendSelect": ["D"],
-            "ignore": ["D100", "D107"],
+            "ignore": ["D100", "D107", "D4", "D2"],
           },
         },
       },
