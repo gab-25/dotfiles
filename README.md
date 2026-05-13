@@ -50,14 +50,14 @@ rm -rf /tmp/google-cloud-cli-linux-x86_64.tar.gz
 ~/google-cloud-sdk/install.sh
 ```
 
-Install firebase cli
-
-```bash
-npm install -g firebase-tools
-```
-
 Install gemini cli
 
 ```bash
 npm install -g @google/gemini-cli
+```
+
+Install claude code
+
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
 ```
