@@ -50,10 +50,10 @@ rm -rf /tmp/google-cloud-cli-linux-x86_64.tar.gz
 ~/google-cloud-sdk/install.sh
 ```
 
-Install gemini cli
+Install antigravity cli
 
 ```bash
-npm install -g @google/gemini-cli
+curl -fsSL https://antigravity.google/cli/install.sh | bash
 ```
 
 Install claude code
