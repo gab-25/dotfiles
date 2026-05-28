@@ -7,7 +7,7 @@ My personal dotfiles
 Install requirements packages
 
 ```bash
-sudo pacman -Sy --noconfirm net-tools bash-completion kubectl k9s helm restic btop starship fzf fd ripgrep lazygit lazydocker neovim zed rclone
+sudo pacman -Sy --noconfirm net-tools bash-completion kubectl k9s helm restic btop starship ttf-jetbrains-mono-nerd fzf fd ripgrep lazygit lazydocker neovim zed rclone
 ```
 
 Install AUR Helper
@@ -17,12 +17,6 @@ sudo pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay.git /tmp/yay
 (cd /tmp/yay && makepkg -si)
 rm -rf /tmp/yay
-```
-
-Install ML4W
-
-```bash
-bash <(curl -s https://ml4w.com/os/stable)
 ```
 
 Install docker
