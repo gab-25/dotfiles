@@ -2,63 +2,27 @@
 
 My personal dotfiles
 
+## install
+
+```bash
+./install.sh
+```
+
+## neovim config
+
+```bash
+git clone https://github.com/gab-25/nvim_config ~/.config/nvim
+```
+
 ## requirements
 
-Install requirements packages
-
-```bash
-sudo pacman -Sy --noconfirm net-tools bash-completion kubectl k9s helm restic btop starship ttf-jetbrains-mono-nerd fzf fd ripgrep lazygit lazydocker neovim zed rclone
-```
-
-Install AUR Helper
-
-```bash
-sudo pacman -S --needed --noconfirm git base-devel
-git clone https://aur.archlinux.org/yay.git /tmp/yay
-(cd /tmp/yay && makepkg -si)
-rm -rf /tmp/yay
-```
-
-Install docker
-
-```bash
-sudo pacman -S --noconfirm docker
-sudo usermod -aG docker $USER
-newgrp docker
-```
-
-Install python
-
-```bash
-curl -LsSf https://astral.sh/uv/install.sh | sh
-curl -sSL https://install.python-poetry.org | python3 -
-```
-
-Install node.js
-
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
-source ~/.bashrc
-nvm install --lts
-```
-
-Install google cloud cli
-
-```bash
-curl -o /tmp/google-cloud-cli-linux-x86_64.tar.gz https://dl.google.com/dl/cloudsdk/channels/rapid/downloads/google-cloud-cli-linux-x86_64.tar.gz
-tar -xf /tmp/google-cloud-cli-linux-x86_64.tar.gz -C ~/
-rm -rf /tmp/google-cloud-cli-linux-x86_64.tar.gz
-~/google-cloud-sdk/install.sh
-```
-
-Install antigravity cli
-
-```bash
-curl -fsSL https://antigravity.google/cli/install.sh | bash
-```
-
-Install claude code
-
-```bash
-curl -fsSL https://claude.ai/install.sh | bash
-```
+| Tool | Install method |
+|------|---------------|
+| net-tools, bash-completion, kubectl, k9s, helm, restic, btop, starship, ttf-jetbrains-mono-nerd, fzf, fd, ripgrep, lazygit, lazydocker, neovim, zed, rclone | pacman |
+| yay | AUR (built from source) |
+| docker | pacman |
+| uv, poetry | official installers |
+| nvm, node.js LTS | nvm |
+| google-cloud-cli | yay (AUR) |
+| antigravity cli | official installer |
+| claude code | official installer |
