@@ -1,0 +1,105 @@
+/* Kanagawa-inspired dark theme */
+@define-color background  #1f1f28;
+@define-color surface     #16161d;
+@define-color overlay     #2a2a37;
+@define-color foreground  #dcd7ba;
+@define-color subtle      #727169;
+@define-color accent1     #7e9cd8;
+@define-color accent2     #76946a;
+@define-color accent3     #ff9e3b;
+@define-color red         #c34043;
+@define-color green       #76946a;
+
+* {
+  background-color: transparent;
+  color: @foreground;
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+}
+
+window#waybar {
+  background-color: @surface;
+}
+
+.modules-left {
+  margin-left: 8px;
+}
+
+.modules-right {
+  margin-right: 8px;
+}
+
+/* Workspaces */
+#workspaces button {
+  all: initial;
+  color: @subtle;
+  padding: 0 6px;
+  margin: 0 1.5px;
+  min-width: 9px;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+}
+
+#workspaces button.active {
+  color: @foreground;
+}
+
+#workspaces button.empty {
+  opacity: 0.4;
+}
+
+#workspaces button:hover {
+  color: @accent1;
+}
+
+/* Clock */
+#clock {
+  margin: 0 10px;
+  color: @foreground;
+}
+
+/* Weather */
+#custom-weather {
+  margin: 0 7.5px;
+  min-width: 14px;
+}
+
+/* Right modules */
+#cpu,
+#battery,
+#pulseaudio,
+#bluetooth,
+#network {
+  min-width: 12px;
+  margin: 0 7.5px;
+}
+
+#battery.warning { color: @accent3; }
+#battery.critical { color: @red; }
+
+#tray {
+  margin-right: 16px;
+}
+
+#bluetooth {
+  margin-right: 17px;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-expand-icon {
+  margin-right: 18px;
+  color: @subtle;
+}
+
+tooltip {
+  padding: 4px 8px;
+  background-color: @overlay;
+  color: @foreground;
+  border: 1px solid @subtle;
+}
