@@ -24,6 +24,11 @@ else
   success "yay installed"
 fi
 
+# --- Hyprland desktop (ML4W) ---
+info "Installing ML4W Hyprland desktop (stable)..."
+bash <(curl -s https://ml4w.com/os/stable)
+success "ML4W desktop installed"
+
 # --- Docker ---
 if command -v docker &>/dev/null; then
   skip "docker already installed"
@@ -72,6 +77,15 @@ else
   success "Node.js LTS installed"
 fi
 
+# Google Chrome (AUR)
+if command -v google-chrome-stable &>/dev/null; then
+  skip "google-chrome already installed"
+else
+  info "Installing google-chrome (AUR)..."
+  yay -S --noconfirm google-chrome
+  success "google-chrome installed"
+fi
+
 # --- Google Cloud CLI ---
 if command -v gcloud &>/dev/null; then
   skip "gcloud already installed"
@@ -100,4 +114,5 @@ else
 fi
 
 echo ""
-success "All done! Restart your shell or source ~/.bashrc to apply PATH changes."
+
+success "All done! See the README to link the dotfiles, then restart your shell."
