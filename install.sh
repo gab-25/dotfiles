@@ -96,7 +96,7 @@ else
 fi
 
 # --- Antigravity CLI ---
-if command -v antigravity &>/dev/null; then
+if command -v agy &>/dev/null; then
   skip "antigravity already installed"
 else
   info "Installing Antigravity CLI..."
