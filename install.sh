@@ -24,11 +24,6 @@ else
   success "yay installed"
 fi
 
-# --- Hyprland desktop (ML4W) ---
-info "Installing ML4W Hyprland desktop (stable)..."
-bash <(curl -s https://ml4w.com/os/stable)
-success "ML4W desktop installed"
-
 # --- Docker ---
 if command -v docker &>/dev/null; then
   skip "docker already installed"

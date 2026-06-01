@@ -33,7 +33,6 @@ git clone https://github.com/gab-25/nvim_config ~/.config/nvim
 |------|---------------|
 | net-tools, bash-completion, kubectl, k9s, helm, restic, btop, starship, ttf-jetbrains-mono-nerd, fzf, fd, ripgrep, lazygit, lazydocker, neovim, zed, rclone | pacman |
 | yay | AUR (built from source) |
-| ML4W Hyprland desktop | `bash <(curl -s https://ml4w.com/os/stable)` |
 | docker | pacman |
 | uv, poetry | official installers |
 | nvm, node.js LTS | nvm |
