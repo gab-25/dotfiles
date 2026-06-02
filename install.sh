@@ -8,7 +8,7 @@ skip() { echo "[SKIP] $*"; }
 # --- Packages ---
 info "Installing pacman packages..."
 sudo pacman -Sy --noconfirm \
-  net-tools bash-completion kubectl k9s helm restic btop starship \
+  net-tools bash-completion kubectl k9s helm restic btop starship fastfetch \
   ttf-jetbrains-mono-nerd fzf fd ripgrep lazygit lazydocker neovim zed rclone
 success "Pacman packages installed"
 
