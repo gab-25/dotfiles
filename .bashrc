@@ -14,12 +14,11 @@ export PATH="$PATH:/home/gab25/.local/bin"
 export EDITOR="vim"
 
 eval "$(starship init bash)"
+eval "$(fzf --bash)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
-
-source /usr/share/fzf/key-bindings.bash
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/gab25/google-cloud-sdk/path.bash.inc' ]; then . '/home/gab25/google-cloud-sdk/path.bash.inc'; fi

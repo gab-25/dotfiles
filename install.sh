@@ -8,8 +8,24 @@ skip() { echo "[SKIP] $*"; }
 # --- Packages ---
 info "Installing pacman packages..."
 sudo pacman -Sy --noconfirm \
-  net-tools bash-completion kubectl k9s helm restic btop starship fastfetch \
-  ttf-jetbrains-mono-nerd fzf fd ripgrep lazygit lazydocker neovim zed rclone
+  bash-completion \
+  btop \
+  fastfetch \
+  fd \
+  fzf \
+  helm \
+  k9s \
+  kubectl \
+  lazydocker \
+  lazygit \
+  neovim \
+  net-tools \
+  rclone \
+  restic \
+  ripgrep \
+  starship \
+  ttf-jetbrains-mono-nerd \
+  zed
 success "Pacman packages installed"
 
 # --- AUR Helper (yay) ---
