@@ -7,12 +7,15 @@ skip() { echo "[SKIP] $*"; }
 
 # --- Packages ---
 info "Installing pacman packages..."
-sudo pacman -Sy --noconfirm \
+sudo pacman -Syu --noconfirm \
   bash-completion \
   btop \
   fastfetch \
   fd \
+  flatpak \
   fzf \
+  gedit \
+  gnome-keyring \
   helm \
   k9s \
   kubectl \
@@ -25,6 +28,7 @@ sudo pacman -Sy --noconfirm \
   ripgrep \
   starship \
   ttf-jetbrains-mono-nerd \
+  xclip \
   zed
 success "Pacman packages installed"
 
@@ -47,7 +51,8 @@ else
   info "Installing docker..."
   sudo pacman -S --noconfirm docker
   sudo usermod -aG docker "$USER"
-  success "docker installed (re-login or run 'newgrp docker' to apply group)"
+  sudo systemctl enable --now docker
+  success "docker installed and enabled (re-login or run 'newgrp docker' to apply group)"
 fi
 
 # --- Python (uv + poetry) ---

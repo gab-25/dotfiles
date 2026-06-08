@@ -26,3 +26,29 @@ Then restart your shell or run `source ~/.bashrc`.
 ```bash
 git clone https://github.com/gab-25/nvim_config ~/.config/nvim
 ```
+
+## save dotfiles
+
+Copy the dotfiles currently in use back into this repo, ready to commit
+(the reverse of the "copy dotfiles" step above):
+
+```bash
+./save.sh         # save the live dotfiles into the repo
+./save.sh --diff  # only show what changed, copy nothing
+```
+
+Then review with `git diff` and commit the changes.
+
+## backup
+
+Back up the home folder with [restic](https://restic.net/):
+
+```bash
+./backup.sh          # run the backup
+./backup.sh --prune  # run the backup, then apply the retention policy
+```
+
+The repository defaults to `~/backups/restic-repo` (override with
+`RESTIC_REPOSITORY`). Set the password via `RESTIC_PASSWORD`,
+`RESTIC_PASSWORD_FILE`, or `~/.config/restic/password`. Initialize the
+repository first with `restic init`.
