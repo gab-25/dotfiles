@@ -23,6 +23,7 @@ sudo pacman -Syu --noconfirm \
   lazygit \
   neovim \
   net-tools \
+  noto-fonts-emoji \
   rclone \
   restic \
   ripgrep \
