@@ -17,7 +17,7 @@ info() { echo "[INFO] $*"; }
 success() { echo "[OK]   $*"; }
 skip() { echo "[SKIP] $*"; }
 
-export RESTIC_REPOSITORY="${RESTIC_REPOSITORY:-$HOME/backups/restic-repo}"
+export RESTIC_REPOSITORY="${RESTIC_REPOSITORY:-$HOME/restic-repo}"
 
 # Pick up a default password file if neither password var is already set.
 DEFAULT_PW_FILE="$HOME/.config/restic/password"

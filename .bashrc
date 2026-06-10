@@ -17,6 +17,12 @@ export EDITOR="vim"
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
+eval "$(zoxide init bash)"
+
+alias ls='eza --icons --group-directories-first'
+alias ll='eza -l --icons --group-directories-first'
+alias la='eza -la --icons --group-directories-first'
+alias lt='eza --tree --level=2 --icons'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"                   # This loads nvm

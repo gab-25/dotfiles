@@ -10,11 +10,13 @@ info "Installing pacman packages..."
 sudo pacman -Syu --noconfirm \
   bash-completion \
   btop \
+  eza \
   fastfetch \
   fd \
   flatpak \
   fzf \
   gedit \
+  github-cli \
   gnome-keyring \
   helm \
   k9s \
@@ -30,7 +32,8 @@ sudo pacman -Syu --noconfirm \
   starship \
   ttf-jetbrains-mono-nerd \
   xclip \
-  zed
+  zed \
+  zoxide
 success "Pacman packages installed"
 
 # --- AUR Helper (yay) ---
@@ -92,15 +95,6 @@ else
   info "Installing Node.js LTS..."
   nvm install --lts
   success "Node.js LTS installed"
-fi
-
-# Google Chrome (AUR)
-if command -v google-chrome-stable &>/dev/null; then
-  skip "google-chrome already installed"
-else
-  info "Installing google-chrome (AUR)..."
-  yay -S --noconfirm google-chrome
-  success "google-chrome installed"
 fi
 
 # --- Google Cloud CLI ---

@@ -17,6 +17,8 @@ DOTFILES="$(pwd)"
 cp "$DOTFILES/.bashrc"        "$HOME/.bashrc"
 cp "$DOTFILES/.gitconfig"     "$HOME/.gitconfig"
 cp "$DOTFILES/starship.toml"  "$HOME/.config/starship.toml"
+cp -r "$DOTFILES/alacritty"   "$HOME/.config/alacritty"
+cp -r "$DOTFILES/niri"        "$HOME/.config/niri"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.
@@ -48,7 +50,7 @@ Back up the home folder with [restic](https://restic.net/):
 ./backup.sh --prune  # run the backup, then apply the retention policy
 ```
 
-The repository defaults to `~/backups/restic-repo` (override with
+The repository defaults to `~/restic-repo` (override with
 `RESTIC_REPOSITORY`). Set the password via `RESTIC_PASSWORD`,
 `RESTIC_PASSWORD_FILE`, or `~/.config/restic/password`. Initialize the
 repository first with `restic init`.
