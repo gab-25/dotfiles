@@ -1,2 +1,6 @@
 [kubernetes]
 disabled = false
+symbol = "󱃾 "
+
+[gcloud]
+symbol = "󱇶 "

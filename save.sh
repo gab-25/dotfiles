@@ -21,7 +21,7 @@ MAP=(
   "$HOME/.bashrc::.bashrc"
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
-  "$HOME/.config/alacritty::alacritty"
+  "$HOME/.config/kitty::kitty"
   "$HOME/.config/niri::niri"
 )
 
