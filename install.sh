@@ -76,6 +76,15 @@ else
   success "poetry installed"
 fi
 
+# --- Rust (rustup) ---
+if command -v rustup &>/dev/null; then
+  skip "rustup already installed"
+else
+  info "Installing rust..."
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+  success "rust installed"
+fi
+
 # --- Node.js (nvm) ---
 if [ -d "$HOME/.nvm" ]; then
   skip "nvm already installed"

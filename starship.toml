@@ -1,3 +1,6 @@
+# Remove the blank line before the prompt (no gap under the tab bar)
+add_newline = false
+
 [kubernetes]
 disabled = false
 symbol = "󱃾 "

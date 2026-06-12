@@ -22,7 +22,6 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.config/kitty::kitty"
-  "$HOME/.config/niri::niri"
 )
 
 DIFF_ONLY=false
