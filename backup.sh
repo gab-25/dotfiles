@@ -7,7 +7,7 @@ set -euo pipefail
 #   1. $RESTIC_PASSWORD            — set in the environment
 #   2. $RESTIC_PASSWORD_FILE       — path to a file holding the password
 #   3. ~/.config/restic/password   — default password file, if it exists
-#   4. interactive prompt          — restic asks on the terminal
+#   4. interactive prompt          — asked once, reused for every command
 #
 # Usage:
 #   ./backup.sh            # run the backup
@@ -23,6 +23,13 @@ export RESTIC_REPOSITORY="${RESTIC_REPOSITORY:-$HOME/restic-repo}"
 DEFAULT_PW_FILE="$HOME/.config/restic/password"
 if [ -z "${RESTIC_PASSWORD:-}" ] && [ -z "${RESTIC_PASSWORD_FILE:-}" ] && [ -f "$DEFAULT_PW_FILE" ]; then
   export RESTIC_PASSWORD_FILE="$DEFAULT_PW_FILE"
+fi
+
+# If still no password source, ask once and reuse it for every restic command.
+if [ -z "${RESTIC_PASSWORD:-}" ] && [ -z "${RESTIC_PASSWORD_FILE:-}" ]; then
+  read -rsp "restic repository password: " RESTIC_PASSWORD
+  echo
+  export RESTIC_PASSWORD
 fi
 
 EXCLUDES=(
