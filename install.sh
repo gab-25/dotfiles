@@ -121,6 +121,15 @@ else
   success "Claude Code installed"
 fi
 
+# --- Open Code ---
+if command -v opencode &>/dev/null; then
+  skip "opencode already installed"
+else
+  info "Installing opencode..."
+  curl -fsSL https://opencode.ai/install | bash
+  success "opencode installed"
+fi
+
 echo ""
 
 success "All done! See the README to link the dotfiles, then restart your shell."
