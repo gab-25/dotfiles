@@ -36,18 +36,6 @@ sudo pacman -Syu --noconfirm \
   zoxide
 success "Pacman packages installed"
 
-# --- AUR Helper (yay) ---
-if command -v yay &>/dev/null; then
-  skip "yay already installed"
-else
-  info "Installing yay..."
-  sudo pacman -S --needed --noconfirm git base-devel
-  git clone https://aur.archlinux.org/yay.git /tmp/yay
-  (cd /tmp/yay && makepkg -si --noconfirm)
-  rm -rf /tmp/yay
-  success "yay installed"
-fi
-
 # --- Docker ---
 if command -v docker &>/dev/null; then
   skip "docker already installed"
