@@ -98,9 +98,9 @@ fi
 if command -v gcloud &>/dev/null; then
   skip "gcloud already installed"
 else
-  info "Installing Google Cloud CLI via AUR..."
-  yay -S --noconfirm google-cloud-cli
-  success "gcloud installed"
+  info "Installing Google Cloud CLI..."
+  curl https://sdk.cloud.google.com | bash
+  success "gcloud installed (restart your shell to use it)"
 fi
 
 # --- Antigravity CLI ---
