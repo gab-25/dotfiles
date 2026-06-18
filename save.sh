@@ -21,7 +21,6 @@ MAP=(
   "$HOME/.bashrc::.bashrc"
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
-  "$HOME/.config/kitty::kitty"
 )
 
 DIFF_ONLY=false
