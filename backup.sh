@@ -33,6 +33,7 @@ if [ -z "${RESTIC_PASSWORD:-}" ] && [ -z "${RESTIC_PASSWORD_FILE:-}" ]; then
 fi
 
 EXCLUDES=(
+  --exclude "$RESTIC_REPOSITORY"
   --exclude "$HOME/.cache"
   --exclude "$HOME/backups"
   --exclude "$HOME/.local/share/Trash"
