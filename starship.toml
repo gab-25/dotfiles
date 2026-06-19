@@ -1,10 +1,6 @@
 # Remove the blank line before the prompt (no gap under the tab bar)
 add_newline = false
 
-# Leading space so wide Nerd Font glyphs aren't at column 0
-# (Konsole clips them on the left edge when the cursor blinks)
-format = " $all"
-
 [kubernetes]
 disabled = false
 symbol = "󱃾 "

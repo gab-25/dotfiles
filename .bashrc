@@ -29,9 +29,3 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion" # This loads nvm bash_completion
 
 . "$HOME/.cargo/env"
-
-# Start tmux automatically on interactive shells
-# (attach to the existing "main" session or create it)
-if command -v tmux &>/dev/null && [ -z "$TMUX" ] && [[ $- == *i* ]]; then
-  exec tmux new-session -A -s main
-fi

@@ -22,6 +22,7 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.tmux.conf::.tmux.conf"
+  "$HOME/.config/alacritty::alacritty"
 )
 
 DIFF_ONLY=false
