@@ -30,6 +30,7 @@ sudo pacman -Syu --noconfirm \
   restic \
   ripgrep \
   starship \
+  tmux \
   ttf-jetbrains-mono-nerd \
   xclip \
   zed \

@@ -17,9 +17,22 @@ DOTFILES="$(pwd)"
 cp "$DOTFILES/.bashrc"        "$HOME/.bashrc"
 cp "$DOTFILES/.gitconfig"     "$HOME/.gitconfig"
 cp "$DOTFILES/starship.toml"  "$HOME/.config/starship.toml"
+cp "$DOTFILES/.tmux.conf"     "$HOME/.tmux.conf"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.
+
+## tmux plugins
+
+The tmux config uses [tpm](https://github.com/tmux-plugins/tpm). On a fresh
+machine, bootstrap it and install the plugins:
+
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+~/.tmux/plugins/tpm/bin/install_plugins
+```
+
+Inside tmux: `prefix + I` to install, `prefix + U` to update.
 
 ## neovim config
 
