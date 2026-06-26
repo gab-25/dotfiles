@@ -5,6 +5,7 @@ eza
 fastfetch
 fd-find
 fzf
+jq
 net-tools
 rclone
 restic
