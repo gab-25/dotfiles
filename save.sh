@@ -22,8 +22,6 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.vimrc::.vimrc"
   "$HOME/.config/starship.toml::starship.toml"
-  "$HOME/.tmux.conf::.tmux.conf"
-  "$HOME/.config/alacritty::alacritty"
 )
 
 DIFF_ONLY=false

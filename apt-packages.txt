@@ -1,0 +1,15 @@
+bash-completion
+btop
+curl
+eza
+fastfetch
+fd-find
+fzf
+net-tools
+rclone
+restic
+ripgrep
+unzip
+vim
+xclip
+zoxide
