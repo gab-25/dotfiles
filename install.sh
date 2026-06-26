@@ -55,6 +55,18 @@ while read -r pkg; do
 done <"$SCRIPT_DIR/brew-packages.txt"
 success "homebrew packages installed"
 
+# --- Flatpak ---
+if command -v flatpak &>/dev/null; then
+  skip "flatpak already installed"
+else
+  info "Installing flatpak..."
+  sudo apt-get install -y flatpak
+  success "flatpak installed"
+fi
+info "Adding flathub remote..."
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+success "flatpak ready"
+
 # --- Docker ---
 if command -v docker &>/dev/null; then
   skip "docker already installed"
