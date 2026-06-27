@@ -148,15 +148,6 @@ else
   success "gcloud installed (restart your shell to use it)"
 fi
 
-# --- Antigravity CLI ---
-if command -v agy &>/dev/null; then
-  skip "antigravity already installed"
-else
-  info "Installing Antigravity CLI..."
-  curl -fsSL https://antigravity.google/cli/install.sh | bash
-  success "Antigravity CLI installed"
-fi
-
 # --- Claude Code ---
 if command -v claude &>/dev/null; then
   skip "claude already installed"

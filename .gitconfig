@@ -3,5 +3,3 @@
 	name = gab-25
 [core]
 	editor = vim
-[includeIf "gitdir:~/projects/eagleprojects/**"]
-  path = ~/projects/eagleprojects/.gitconfig-eagle
