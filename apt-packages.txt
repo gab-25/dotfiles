@@ -5,6 +5,7 @@ eza
 fastfetch
 fd-find
 fzf
+git
 jq
 net-tools
 rclone
@@ -12,5 +13,6 @@ restic
 ripgrep
 unzip
 vim
+wl-clipboard
 xclip
 zoxide
