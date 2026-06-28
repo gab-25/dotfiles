@@ -121,6 +121,7 @@ export EDITOR="vim"
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 
 alias ls='eza --icons --group-directories-first'
 alias ll='eza -l --icons --group-directories-first'

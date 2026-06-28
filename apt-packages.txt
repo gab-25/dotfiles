@@ -15,4 +15,5 @@ unzip
 vim
 wl-clipboard
 xclip
+starship
 zoxide

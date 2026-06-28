@@ -4,4 +4,3 @@ lazydocker
 helm
 kubernetes-cli
 k9s
-starship
