@@ -9,7 +9,6 @@ set hidden                    " switch buffers without saving
 set autoread                  " reload files changed outside Vim
 set mouse=a                   " mouse support in all modes
 set ttimeoutlen=10            " faster <Esc> response
-set updatetime=300
 
 " ── UI ────────────────────────────────────────────────────────
 set number relativenumber     " hybrid line numbers
@@ -19,7 +18,6 @@ set wildmenu                  " better command-line completion
 set wildmode=longest:full,full
 set scrolloff=5               " keep context around cursor
 set sidescrolloff=8
-set signcolumn=yes            " stable gutter (no text jump)
 set laststatus=2              " always show status line
 set ruler
 set termguicolors             " 24-bit color
