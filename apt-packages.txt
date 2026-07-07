@@ -1,5 +1,6 @@
 bash-completion
 btop
+build-essential
 curl
 eza
 fastfetch

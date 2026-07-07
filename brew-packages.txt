@@ -1,6 +1,6 @@
 gh
-lazygit
-lazydocker
 helm
-kubernetes-cli
 k9s
+kubernetes-cli
+lazydocker
+lazygit
