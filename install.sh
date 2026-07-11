@@ -130,15 +130,6 @@ else
   success "latest Node.js installed"
 fi
 
-# --- zed ---
-if command -v zed &>/dev/null; then
-  skip "zed already installed"
-else
-  info "Installing zed..."
-  curl -fsSL https://zed.dev/install.sh | sh
-  success "zed installed"
-fi
-
 # --- Google Cloud CLI ---
 if command -v gcloud &>/dev/null; then
   skip "gcloud already installed"
