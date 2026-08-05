@@ -20,7 +20,6 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 MAP=(
   "$HOME/.bashrc::.bashrc"
   "$HOME/.gitconfig::.gitconfig"
-  "$HOME/.vimrc::.vimrc"
   "$HOME/.config/starship.toml::starship.toml"
 )
 
