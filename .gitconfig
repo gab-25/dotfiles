@@ -5,5 +5,3 @@
 [user]
 	name = gab-25
 	email = gabrielesorci.25@gmail.com
-[includeIf "gitdir:~/projects/eagleprojects/"]
-	path = ~/.gitconfig-eagleprojects
