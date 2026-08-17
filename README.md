@@ -33,6 +33,26 @@ Copy the dotfiles currently in use back into this repo, ready to commit
 
 Then review with `git diff` and commit the changes.
 
+## update
+
+Update the installed packages:
+
+```bash
+./update.sh               # update apt, homebrew and flatpak
+./update.sh --apt --brew  # only the package managers listed
+./update.sh --no-cleanup  # skip the cleanup steps
+```
+
+Package managers that are not installed are skipped. Unless
+`--no-cleanup` is passed, the script also runs `apt-get autoremove`,
+`brew cleanup` and `flatpak uninstall --unused`.
+
+apt and flatpak need root, so the sudo password is asked once at the
+start and the credentials are kept alive for the rest of the run (with
+`--brew` alone it is never asked). Homebrew runs last on purpose: every
+`brew` command resets the sudo timestamp, which would make the steps
+after it ask for the password again.
+
 ## backup
 
 Back up the home folder with [restic](https://restic.net/):
