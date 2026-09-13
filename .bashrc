@@ -118,6 +118,8 @@ fi
 
 export EDITOR="nvim"
 
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init bash)"

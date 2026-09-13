@@ -3,3 +3,6 @@
 [user]
 	name = gab-25
 	email = gabrielesorci.25@gmail.com
+[credential "https://gitlab.eagleprojects.cloud"]
+	helper = 
+	helper = !/home/linuxbrew/.linuxbrew/Cellar/glab/1.115.0/bin/glab auth git-credential
