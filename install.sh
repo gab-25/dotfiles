@@ -130,15 +130,6 @@ else
   success "latest Node.js installed"
 fi
 
-# --- Google Cloud CLI ---
-if command -v gcloud &>/dev/null; then
-  skip "gcloud already installed"
-else
-  info "Installing Google Cloud CLI..."
-  curl https://sdk.cloud.google.com | bash
-  success "gcloud installed (restart your shell to use it)"
-fi
-
 # --- Claude Code ---
 if command -v claude &>/dev/null; then
   skip "claude already installed"
