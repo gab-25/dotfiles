@@ -2,5 +2,4 @@ gh
 helm
 k9s
 kubernetes-cli
-lazydocker
 lazygit
