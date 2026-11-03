@@ -17,6 +17,7 @@ DOTFILES="$(pwd)"
 cp "$DOTFILES/.bashrc"        "$HOME/.bashrc"
 cp "$DOTFILES/.gitconfig"     "$HOME/.gitconfig"
 cp "$DOTFILES/starship.toml"  "$HOME/.config/starship.toml"
+cp "$DOTFILES/ghostty/config.ghostty" "$HOME/.config/ghostty/config.ghostty"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.

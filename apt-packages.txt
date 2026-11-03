@@ -6,6 +6,7 @@ eza
 fastfetch
 fd-find
 fzf
+ghostty
 git
 jq
 net-tools
