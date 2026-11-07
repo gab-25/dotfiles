@@ -22,6 +22,11 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.config/ghostty/config.ghostty::ghostty/config.ghostty"
+  "$HOME/.config/herdr-app/settings.json::herdr-app/settings.json"
+  "$HOME/.config/herdr-app/shared.json::herdr-app/shared.json"
+  "$HOME/.config/herdr-app/keys.json::herdr-app/keys.json"
+  "$HOME/.config/herdr-app/themes::herdr-app/themes"
+  "$HOME/.config/herdr-app/layouts::herdr-app/layouts"
 )
 
 DIFF_ONLY=false
