@@ -22,7 +22,6 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.config/ghostty/config.ghostty::ghostty/config.ghostty"
-  "$HOME/.config/herdr-core/config.toml::herdr-core/config.toml"
 )
 
 DIFF_ONLY=false
