@@ -78,6 +78,28 @@ else
   success "docker installed and enabled (re-login or run 'newgrp docker' to apply group)"
 fi
 
+# --- Visual Studio Code (Microsoft apt repo, so update.sh upgrades it) ---
+if command -v code &>/dev/null; then
+  skip "vscode already installed"
+else
+  info "Installing vscode..."
+  sudo install -d -m 0755 /etc/apt/keyrings
+  curl -fsSL https://packages.microsoft.com/keys/microsoft.asc |
+    gpg --dearmor >"$TMPDIR_DL/microsoft.gpg"
+  sudo install -m 0644 "$TMPDIR_DL/microsoft.gpg" /etc/apt/keyrings/packages.microsoft.gpg
+  sudo tee /etc/apt/sources.list.d/vscode.sources >/dev/null <<'EOF'
+Types: deb
+URIs: https://packages.microsoft.com/repos/code
+Suites: stable
+Components: main
+Architectures: amd64,arm64,armhf
+Signed-By: /etc/apt/keyrings/packages.microsoft.gpg
+EOF
+  sudo apt-get update
+  sudo apt-get install -y code
+  success "vscode installed"
+fi
+
 # --- JetBrains Mono Nerd Font ---
 if fc-list 2>/dev/null | grep -qi "JetBrainsMono Nerd Font"; then
   skip "JetBrains Mono Nerd Font already installed"
