@@ -148,15 +148,6 @@ else
   success "opencode installed"
 fi
 
-# --- Herdr ---
-if command -v herdr &>/dev/null; then
-  skip "herdr already installed"
-else
-  info "Installing herdr..."
-  curl -fsSL https://herdr.dev/install.sh | sh
-  success "herdr installed"
-fi
-
 echo ""
 
 success "All done! See the README to link the dotfiles, then restart your shell."
