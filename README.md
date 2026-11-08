@@ -23,6 +23,20 @@ mkdir -p "$HOME/.config" && cp -r "$DOTFILES/herdr-app" "$HOME/.config/"
 
 Then restart your shell or run `source ~/.bashrc`.
 
+## neovim config
+
+The Neovim config lives in its own repo,
+[gab-25/nvim_config](https://github.com/gab-25/nvim_config). After running
+`install.sh`, clone it into `~/.config/nvim`:
+
+```bash
+git clone https://github.com/gab-25/nvim_config.git "$HOME/.config/nvim"
+git -C "$HOME/.config/nvim" remote set-url --push origin git@github.com:gab-25/nvim_config.git
+```
+
+The first time `nvim` starts, lazy.nvim installs the plugins pinned in
+`lazy-lock.json`.
+
 ## save dotfiles
 
 Copy the dotfiles currently in use back into this repo, ready to commit

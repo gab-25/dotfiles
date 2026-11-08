@@ -100,6 +100,19 @@ EOF
   success "vscode installed"
 fi
 
+# --- Neovim (official prebuilt tarball in /opt, PATH set in .bashrc) ---
+NVIM_DIR="/opt/nvim-linux-x86_64"
+if [ -x "$NVIM_DIR/bin/nvim" ]; then
+  skip "neovim already installed ($("$NVIM_DIR/bin/nvim" --version | head -1))"
+else
+  info "Installing neovim..."
+  curl -fsSL -o "$TMPDIR_DL/nvim-linux-x86_64.tar.gz" \
+    https://github.com/neovim/neovim/releases/latest/download/nvim-linux-x86_64.tar.gz
+  sudo rm -rf "$NVIM_DIR"
+  sudo tar -C /opt -xzf "$TMPDIR_DL/nvim-linux-x86_64.tar.gz"
+  success "neovim installed"
+fi
+
 # --- JetBrains Mono Nerd Font ---
 if fc-list 2>/dev/null | grep -qi "JetBrainsMono Nerd Font"; then
   skip "JetBrains Mono Nerd Font already installed"
