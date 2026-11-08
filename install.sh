@@ -78,6 +78,15 @@ else
   success "docker installed and enabled (re-login or run 'newgrp docker' to apply group)"
 fi
 
+# --- Tailscale (official script adds the apt repo, so update.sh upgrades it) ---
+if command -v tailscale &>/dev/null; then
+  skip "tailscale already installed"
+else
+  info "Installing tailscale..."
+  curl -fsSL https://tailscale.com/install.sh | sh
+  success "tailscale installed (run 'sudo tailscale up' to log in)"
+fi
+
 # --- Visual Studio Code (Microsoft apt repo, so update.sh upgrades it) ---
 if command -v code &>/dev/null; then
   skip "vscode already installed"

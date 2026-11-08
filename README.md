@@ -23,6 +23,15 @@ mkdir -p "$HOME/.config" && cp -r "$DOTFILES/herdr-app" "$HOME/.config/"
 
 Then restart your shell or run `source ~/.bashrc`.
 
+## tailscale
+
+`install.sh` installs Tailscale but does not log in. Connect the machine
+to the tailnet with:
+
+```bash
+sudo tailscale up
+```
+
 ## neovim config
 
 The Neovim config lives in its own repo,
