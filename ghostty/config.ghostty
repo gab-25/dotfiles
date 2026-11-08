@@ -1,4 +1,0 @@
-# Ghostty config — see `ghostty +show-config --default --docs` for all options
-font-family = JetBrainsMono Nerd Font
-font-size = 11
-theme = Gruvbox Dark
