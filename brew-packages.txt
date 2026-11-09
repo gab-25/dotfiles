@@ -1,5 +1,7 @@
+age
 gh
 helm
 k9s
 kubernetes-cli
 lazygit
+sops
