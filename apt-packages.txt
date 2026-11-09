@@ -5,6 +5,7 @@ curl
 eza
 fastfetch
 fd-find
+ffmpeg
 fzf
 git
 jq
