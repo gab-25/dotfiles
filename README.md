@@ -14,10 +14,12 @@ After running `install.sh`, copy the dotfiles into place:
 
 ```bash
 DOTFILES="$(pwd)"
-cp "$DOTFILES/.bashrc"        "$HOME/.bashrc"
-cp "$DOTFILES/.gitconfig"     "$HOME/.gitconfig"
-cp "$DOTFILES/starship.toml"  "$HOME/.config/starship.toml"
-mkdir -p "$HOME/.config" && cp -r "$DOTFILES/herdr-app" "$HOME/.config/"
+cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
+cp "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
+cp "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
+cp "$DOTFILES/herdr-app/settings.json" "$HOME/.config/herdr-app/settings.json"
+cp "$DOTFILES/herdr-app/keys.json" "$HOME/.config/herdr-app/keys.json"
+cp "$DOTFILES/herdr-app/themes/gruvbox.json" "$HOME/.config/herdr-app/themes/gruvbox.json"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.
