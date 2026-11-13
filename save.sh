@@ -23,6 +23,7 @@ MAP=(
   "$HOME/.bashrc::.bashrc"
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
+  "$HOME/.config/lazygit/config.yml::lazygit/config.yml"
   "$HOME/.config/herdr-app/settings.json::herdr-app/settings.json"
   "$HOME/.config/herdr-app/keys.json::herdr-app/keys.json"
   "$HOME/.config/herdr-app/themes/gruvbox.json::herdr-app/themes/gruvbox.json"
