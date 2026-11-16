@@ -18,9 +18,6 @@ cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
 cp "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 cp "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 cp "$DOTFILES/lazygit/config.yml" "$HOME/.config/lazygit/config.yml"
-cp "$DOTFILES/herdr-app/settings.json" "$HOME/.config/herdr-app/settings.json"
-cp "$DOTFILES/herdr-app/keys.json" "$HOME/.config/herdr-app/keys.json"
-cp "$DOTFILES/herdr-app/themes/gruvbox.json" "$HOME/.config/herdr-app/themes/gruvbox.json"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.
@@ -47,6 +44,21 @@ git -C "$HOME/.config/nvim" remote set-url --push origin git@github.com:gab-25/n
 
 The first time `nvim` starts, lazy.nvim installs the plugins pinned in
 `lazy-lock.json`.
+
+## herdr config
+
+The Herdr app config (layout, theme, keys, settings and mods) lives in its
+own repo, [gab-25/herdr_config](https://github.com/gab-25/herdr_config).
+After running `install.sh`, start Herdr once, then run the repo's installer,
+which turns `~/.config/herdr-app` into a clone of the repo (backing up the
+files it overwrites):
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/gab-25/herdr_config/main/install.sh | sh
+git -C "$HOME/.config/herdr-app" remote set-url --push origin git@github.com:gab-25/herdr_config.git
+```
+
+Update it later with `git -C ~/.config/herdr-app pull`.
 
 ## save dotfiles
 

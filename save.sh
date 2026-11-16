@@ -17,16 +17,11 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Mapping of "source in $HOME" -> "destination in the repo".
 # Works for both single files and directories.
-# Only personal configuration is saved. herdr-app's layouts/ (shipped ones are
-# replaced on every start) and its state (shared.json) are left to the app.
 MAP=(
   "$HOME/.bashrc::.bashrc"
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.config/lazygit/config.yml::lazygit/config.yml"
-  "$HOME/.config/herdr-app/settings.json::herdr-app/settings.json"
-  "$HOME/.config/herdr-app/keys.json::herdr-app/keys.json"
-  "$HOME/.config/herdr-app/themes/gruvbox.json::herdr-app/themes/gruvbox.json"
 )
 
 DIFF_ONLY=false
