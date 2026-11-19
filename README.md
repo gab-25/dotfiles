@@ -46,21 +46,6 @@ git -C "$HOME/.config/nvim" remote set-url --push origin git@github.com:gab-25/n
 The first time `nvim` starts, lazy.nvim installs the plugins pinned in
 `lazy-lock.json`.
 
-## herdr config
-
-The Herdr app config (layout, theme, keys, settings and mods) lives in its
-own repo, [gab-25/herdr_config](https://github.com/gab-25/herdr_config).
-After running `install.sh`, start Herdr once, then run the repo's installer,
-which turns `~/.config/herdr-app` into a clone of the repo (backing up the
-files it overwrites):
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/gab-25/herdr_config/main/install.sh | sh
-git -C "$HOME/.config/herdr-app" remote set-url --push origin git@github.com:gab-25/herdr_config.git
-```
-
-Update it later with `git -C ~/.config/herdr-app pull`.
-
 ## save dotfiles
 
 Copy the dotfiles currently in use back into this repo, ready to commit
