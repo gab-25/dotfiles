@@ -7,6 +7,7 @@ fastfetch
 fd-find
 ffmpeg
 fzf
+ghostty
 git
 jq
 net-tools

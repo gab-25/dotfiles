@@ -22,6 +22,7 @@ MAP=(
   "$HOME/.gitconfig::.gitconfig"
   "$HOME/.config/starship.toml::starship.toml"
   "$HOME/.config/lazygit/config.yml::lazygit/config.yml"
+  "$HOME/.config/ghostty/config::ghostty/config"
 )
 
 DIFF_ONLY=false

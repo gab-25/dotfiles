@@ -18,6 +18,7 @@ cp "$DOTFILES/.bashrc" "$HOME/.bashrc"
 cp "$DOTFILES/.gitconfig" "$HOME/.gitconfig"
 cp "$DOTFILES/starship.toml" "$HOME/.config/starship.toml"
 cp "$DOTFILES/lazygit/config.yml" "$HOME/.config/lazygit/config.yml"
+cp "$DOTFILES/ghostty/config" "$HOME/.config/ghostty/config"
 ```
 
 Then restart your shell or run `source ~/.bashrc`.
