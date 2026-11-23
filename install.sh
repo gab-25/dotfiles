@@ -109,19 +109,6 @@ EOF
   success "vscode installed"
 fi
 
-# --- Orca IDE (.deb from the latest GitHub release) ---
-# The package is orca-ide: /usr/bin/orca belongs to GNOME's screen reader.
-if dpkg -s orca-ide &>/dev/null; then
-  skip "orca already installed"
-else
-  info "Installing orca..."
-  curl -fsSL -o "$TMPDIR_DL/orca-ide.deb" \
-    "https://github.com/stablyai/orca/releases/latest/download/$(curl -fsSL https://api.github.com/repos/stablyai/orca/releases/latest |
-      grep -o '"name": *"orca-ide_[^"]*_amd64\.deb"' | cut -d'"' -f4)"
-  sudo apt-get install -y "$TMPDIR_DL/orca-ide.deb"
-  success "orca installed"
-fi
-
 # --- Neovim (official prebuilt tarball in /opt, PATH set in .bashrc) ---
 NVIM_DIR="/opt/nvim-linux-x86_64"
 if [ -x "$NVIM_DIR/bin/nvim" ]; then
