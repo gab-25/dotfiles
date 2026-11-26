@@ -138,7 +138,7 @@ if "$DO_BREW"; then
   if command -v brew &>/dev/null; then
     info "Updating homebrew packages..."
     brew update
-    brew upgrade
+    brew upgrade -y
     if "$CLEANUP"; then
       info "Cleaning up old homebrew versions..."
       brew cleanup

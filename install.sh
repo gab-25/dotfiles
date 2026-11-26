@@ -49,7 +49,7 @@ while read -r pkg; do
     skip "$pkg already installed"
   else
     info "Installing $pkg..."
-    brew install "$pkg"
+    brew install -y "$pkg"
     success "$pkg installed"
   fi
 done <"$SCRIPT_DIR/brew-packages.txt"
